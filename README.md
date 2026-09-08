@@ -85,6 +85,13 @@ The framebuffer is a 2-bit-per-pixel packed image (4 pixels/byte) with codes
 the logical 296x128 image (matches the `hass-gicisky` device profile for this
 device type).
 
+## Acknowledgements
+
+The BLE protocol and colour/rotation profile for this device type were
+reverse-engineered with reference to
+[eigger/hass-gicisky](https://github.com/eigger/hass-gicisky), a Home
+Assistant integration for Gicisky BLE e-paper labels.
+
 ## Development
 
 ```bash
