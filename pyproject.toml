@@ -1,0 +1,52 @@
+[project]
+name = "gicisky-296-bwry"
+version = "0.1.0"
+description = "BLE driver for the Gicisky/PICKSMART 2.9-inch 296x128 BWRY e-paper display"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+keywords = ["gicisky", "e-paper", "eink", "ble", "bleak", "bwry"]
+authors = [
+    { name = "RealPotatoe" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Home Automation",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "bleak>=0.21",
+    "Pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "ruff>=0.16",
+]
+
+[project.urls]
+Homepage = "https://github.com/RealPotatoe/gicisky-296-bwry"
+Repository = "https://github.com/RealPotatoe/gicisky-296-bwry"
+Issues = "https://github.com/RealPotatoe/gicisky-296-bwry/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gicisky_296_bwry"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
