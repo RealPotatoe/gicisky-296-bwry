@@ -1,6 +1,6 @@
 [project]
 name = "gicisky-296-bwry"
-version = "0.1.0"
+version = "0.1.1"
 description = "BLE driver for the Gicisky/PICKSMART 2.9-inch 296x128 BWRY e-paper display"
 readme = "README.md"
 license = "MIT"

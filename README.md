@@ -8,7 +8,7 @@ BWRY (black/white/red/yellow) e-paper display (device type `0x002E`).
 ## Install
 
 ```bash
-pip install -e .
+pip install gicisky-296-bwry
 ```
 
 ## Usage
