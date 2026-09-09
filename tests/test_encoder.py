@@ -16,6 +16,12 @@ def test_rejects_wrong_size():
         encode(image)
 
 
+@pytest.mark.parametrize("image", [None, "image.png", b"image data", object()])
+def test_rejects_non_image_input(image):
+    with pytest.raises(TypeError, match="image must be a PIL.Image.Image"):
+        encode(image)
+
+
 def test_marker_pixel_lands_in_correct_rotated_position():
     """
     Verify that encode() applies exactly the documented 90-degree

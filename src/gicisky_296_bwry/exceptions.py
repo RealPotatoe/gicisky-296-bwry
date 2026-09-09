@@ -6,12 +6,12 @@ class GiciskyError(Exception):
 
 
 class GiciskyConnectionError(GiciskyError):
-    """Could not connect to the tag."""
+    """BLE connection, subscription, I/O, or disconnection failed."""
 
 
 class GiciskyProtocolError(GiciskyError):
-    """The tag returned an unexpected or malformed protocol response."""
+    """A protocol exchange timed out or returned an invalid response."""
 
 
 class GiciskyTransferError(GiciskyError):
-    """Image transfer to the tag failed."""
+    """The tag rejected a transfer, or its time/retry budget was exhausted."""

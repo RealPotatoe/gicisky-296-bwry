@@ -31,6 +31,8 @@ def encode(image: Image.Image) -> bytes:
     Returns a ``bytes`` object of ``WIDTH * HEIGHT // 4`` bytes, with
     four 2-bit pixels packed into each byte (MSB first).
     """
+    if not isinstance(image, Image.Image):
+        raise TypeError("image must be a PIL.Image.Image")
     if image.size != (WIDTH, HEIGHT):
         raise ValueError(f"Expected {WIDTH}x{HEIGHT} image, got {image.size}")
 

@@ -34,6 +34,15 @@ See `examples/display_test_image.py` for a runnable four-colour test pattern,
 tiles the mascot three times across the panel, or `examples/display_photo.py`
 to fit/quantize any arbitrary photo onto the panel.
 
+## Error handling
+
+Failures raise `GiciskyError` subclasses (`GiciskyConnectionError`,
+`GiciskyProtocolError`, `GiciskyTransferError`); a failed or cancelled
+`upload()` disconnects, so call `connect()` again before retrying.
+
+Timeouts and retry limits are configurable via `GiciskyTag` keyword
+arguments, e.g. `GiciskyTag(address, transfer_timeout=60, max_retries=5)`.
+
 ## Finding your tag's BLE address
 
 Each tag advertises over BLE and has its address printed on a label next to a
